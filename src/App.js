@@ -12,7 +12,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to Scoreboard</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Lets start making the scoreboard app!!!
         </p>
       </div>
     );
