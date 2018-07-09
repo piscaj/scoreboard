@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DigitProtocolTester from './protocolTest.js'
 
 class App extends Component {
-  // THIS LOOKS PRETTY GOOD!
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Scoreboard</h1>
-        </header>
-        <p className="App-intro">
-          Lets start making the scoreboard app!!!
-        </p>
+        <DigitProtocolTester />
       </div>
     );
   }
