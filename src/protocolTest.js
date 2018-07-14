@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { toHex } from './convertHex.js';
+//import { toHex } from './convertHex.js';
 import { calculateChk } from './calculateChecksum..js';
 import { SOH, DIGIT, ID0, ID1, ETX } from "./constants.js";
 
@@ -18,7 +18,7 @@ class DigitProtocolTest extends Component {
       //Change text string to ascii character and convert to hex.
       this.setState({myStringIsNowHex: e.target.value.charCodeAt(0).toString(16)});
       this.setState({buildDisplayCommand: e.target.value.charCodeAt(0).toString(16)});
-      //this.setState({checksum:0x01+0x44+0x30+0x31}); 
+      this.setState({checksum: calculateChk(DIGIT+ID0+ID1+e.target.value.charCodeAt(0).toString(16))}); 
     }
     render() {
       return(
@@ -26,7 +26,7 @@ class DigitProtocolTest extends Component {
         <input type="text" onChange = {this.updateState}/>
           <h4>User input to hex: 0x{this.state.buildDisplayCommand === 'NaN' ? '00' : this.state.buildDisplayCommand}</h4>
           <p>
-          <h4>{this.state.buildDisplayCommand === 'NaN' ? '00' : '0'+SOH+' '+DIGIT.toString(16)+' '+ID0.toString(16)+' '+ID1.toString(16)+' '+this.state.buildDisplayCommand} {this.state.checksum.toString(16)+ETX}</h4>
+          <h4>{this.state.buildDisplayCommand === 'NaN' ? '00' : '0'+SOH+' '+DIGIT.toString(16)+' '+ID0.toString(16)+' '+ID1.toString(16)+' '+this.state.buildDisplayCommand} {this.state.checksum.toString(16)+' '+ETX}</h4>
           </p>
         </div>
       );
