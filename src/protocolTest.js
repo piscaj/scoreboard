@@ -15,7 +15,7 @@ class DigitProtocolTest extends Component {
       this.updateState = this.updateState.bind(this);
     };
     updateState(e) {
-      //Change text string to ascii character and convert to hex.
+      //Process string input to protocol for digit.
       this.setState({myStringIsNowHex: e.target.value.charCodeAt(0).toString(16)});
       this.setState({buildDisplayCommand: e.target.value.charCodeAt(0).toString(16)});
       TEMP = parseInt(e.target.value.charCodeAt(0),10);
