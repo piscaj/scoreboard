@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from '../../../Library/Caches/typescript/2.9/node_modules/@types/react';
 import './App.css';
-import DigitProtocolTester from './protocolTest.js'
+import DigitProtocolTester from './protocolTest'
 
 class App extends Component {
   render() {

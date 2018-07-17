@@ -1,6 +1,6 @@
 
-import React, { Component } from 'react';
-import { calculateChk } from './calculateChecksum..js';
+import React, { Component } from '../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import { calculateChk } from './calculateChecksum.js';
 import { SOH, DIGIT, ID0, ID1, ETX } from "./constants.js";
 
 var TEMP = 0x00;
@@ -26,12 +26,11 @@ class DigitProtocolTest extends Component {
         <div>
         <input type="text" onChange = {this.updateState}/>
           <h4>User input to hex: 0x{this.state.buildDisplayCommand === 'NaN' ? '00' : this.state.buildDisplayCommand}</h4>
-          
           <h4>{this.state.buildDisplayCommand === 'NaN' ? '00' : '0'+SOH+' '+DIGIT.toString(16)+' '+ID0.toString(16)+' '+ID1.toString(16)+' '+this.state.buildDisplayCommand+' '+this.state.checksum.toString(16)+' 0'+ETX}</h4>
           
         </div>
       );
     }
   }
-  
+
   export default DigitProtocolTest;
