@@ -1,7 +1,8 @@
 
-import React, { Component } from '../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { Component } from 'react';
 import { calculateChk } from './calculateChecksum.js';
 import { SOH, DIGIT, ID0, ID1, ETX } from "./constants.js";
+import { displayCommand } from './controlDigit.js';
 
 var TEMP = 0x00;
 class DigitProtocolTest extends Component {
@@ -16,6 +17,7 @@ class DigitProtocolTest extends Component {
     };
     updateState(e) {
       //Process string input to protocol for digit.
+      console.log(displayCommand(e));
       this.setState({myStringIsNowHex: e.target.value.charCodeAt(0).toString(16)});
       this.setState({buildDisplayCommand: e.target.value.charCodeAt(0).toString(16)});
       TEMP = parseInt(e.target.value.charCodeAt(0),10);

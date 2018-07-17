@@ -8,5 +8,5 @@ export const calculateChk = s =>
     //console.log(TEMP);
     //console.log(toHex(TEMP[0]));
     //console.log(toHex(TEMP[1]));
-    return toHex(TEMP[0])+' '+toHex(TEMP[1]) ;
+    return toHex(TEMP[0])+toHex(TEMP[1]) ;
 }
