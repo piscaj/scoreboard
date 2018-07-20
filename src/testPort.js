@@ -1,12 +1,11 @@
-var serialport = require("serialport"),
-    SerialPort = serialport.list.SerialPort,
-    portname = process.argv[2];
+var serialport = require("serialport");// include the library
+var portname = process.argv[2]; // get port name from the command line
 
-var myPort = new SerialPort(portname, {
-    baudRate: 9600,
-    options: false,
-    parser: serialport.parsers.Readline('\r\n')
-}); 
+var myPort = new SerialPort(portname, 9600); //Setup serial port
+ 
+var Readline = SerialPort.parsers.Readline; // make instance of Readline parser
+var parser = new Readline(); // make a new parser to read ASCII lines
+myPort.pipe(parser); // pipe the serial stream to the parser
 
 myPort.on('open', function(){
 console.log('Port is open');
