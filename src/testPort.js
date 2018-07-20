@@ -1,4 +1,5 @@
 var serialport = require("serialport");// include the library
+var SerialPort = serialport.parsers.SerialPort;
 var portname = process.argv[2]; // get port name from the command line
 
 var myPort = new SerialPort(portname, 9600); //Setup serial port
