@@ -11,6 +11,7 @@ myPort.pipe(parser); // pipe the serial stream to the parser
 
 myPort.on('open', function(){
 console.log('Port is open');
+myPort.write('Hello!!!\r\n')
 });
 
 myPort.on('close', function(){
