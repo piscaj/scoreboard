@@ -5,7 +5,7 @@ var serialport = require("serialport"),
 var myPort = new SerialPort(portname, {
     baudRate: 9600,
     options: false,
-    parser: serialport.parsers.readline('\r\n')
+    parser: serialport.parsers.Readline('\r\n')
 }); 
 
 myPort.on('open', function(){
