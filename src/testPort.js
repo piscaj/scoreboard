@@ -1,8 +1,9 @@
-var serialport = require("serialport");// include the library
-var SerialPort = serialport.SerialPort;
+var SerialPort = require('serialport');// include the library
 var portname = process.argv[2]; // get port name from the command line
 
-var myPort = new SerialPort(portname, 9600); //Setup serial port
+var myPort = new SerialPort(portname, {
+    baudRate: 9600
+  }); //Setup serial port
  
 var Readline = SerialPort.parsers.Readline; // make instance of Readline parser
 var parser = new Readline(); // make a new parser to read ASCII lines
