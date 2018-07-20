@@ -1,6 +1,6 @@
-var serialport = require("serialport");
-var SerialPort = serialport.list.SerialPort;
-var portname = process.abort.argv[2];
+var serialport = require("serialport"),
+    SerialPort = serialport.list.SerialPort,
+    portname = process.argv[2];
 
 var myPort = new SerialPort(portname, {
     baudRate: 9600,
