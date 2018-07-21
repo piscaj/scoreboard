@@ -22,7 +22,7 @@ myPort.on('error', function(){
 console.log('Port error');
 });
 
-myPort.on('data', function (data) {
-  console.log('Data:', data);
+myPort.on('readable', function () {
+  console.log('Data:', port.read());
 myPort.write('Recieved data\r\n')
 });
