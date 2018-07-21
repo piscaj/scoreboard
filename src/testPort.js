@@ -1,7 +1,7 @@
 var SerialPort = require('serialport');// include the library
 var portname = process.argv[2]; // get port name from the command line
 
-var myPort = new SerialPort(portname, {
+var myPort = new SerialPort('/dev/ttyAMA0', {
     baudRate: 9600
   }); //Setup serial port
  
@@ -22,7 +22,7 @@ myPort.on('error', function(){
 console.log('Port error');
 });
 
-myPort.on('readable', function () {
-  console.log('Data:', port.read());
+myPort.on('data', function (data) {
+  console.log('Data:', data);
 myPort.write('Recieved data\r\n')
 });
