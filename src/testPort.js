@@ -6,7 +6,7 @@ var myPort = new SerialPort(portname, {
   }); //Setup serial port
  
 var Readline = SerialPort.parsers.Readline; // make instance of Readline parser
-var parser = new Readline(); // make a new parser to read ASCII lines
+var parser = new Readline(); // make a new parser to read data
 myPort.pipe(parser); // pipe the serial stream to the parser
 
 myPort.on('open', function(){
@@ -23,6 +23,6 @@ console.log('Port error');
 });
 
 myPort.on('data', function(){
-console.log('data');
+console.log(data);
 myPort.write('Recieved data\r\n')
 });
