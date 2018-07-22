@@ -1,4 +1,4 @@
-var serialport = require('serialport');// include the library
+var SerialPort = require('serialport');// include the library
 var portname = process.argv[2]; // get port name from the command line
 
 var myPort = new SerialPort('/dev/ttyS0', {
