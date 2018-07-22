@@ -16,6 +16,7 @@ myPort.on('error', showError);
 
 function showPortOpen() {
   console.log('port open. Data rate: ' + myPort.baudRate);
+  myPort.write("Hello");
 }
 
 function readSerialData(data) {
