@@ -10,7 +10,7 @@ var parser = new Readline(); // make a new parser to read data
 myPort.pipe(parser); // pipe the serial stream to the parser
 
 myPort.on('open', showPortOpen);
-parser.on('data', readSerialData);
+myPort.on('data', readSerialData);
 myPort.on('close', showPortClose);
 myPort.on('error', showError);
 
