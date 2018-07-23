@@ -15,28 +15,28 @@ parser.on('data', readSerialData);
 myPort.on('close', showPortClose);
 myPort.on('error', showError);
 
-showPortOpen = () => {
+const showPortOpen = () => {
   console.log('Port open. Data rate: ' + myPort.baudRate);
   setTimeout(portWrite, 3000);
 }
 
-readSerialData = data => {
+const readSerialData = data => {
   console.log(data);
   setTimeout(portLoop, 2000);
 }
 
-showPortClose = () => {
+const showPortClose = () => {
   console.log('Port closed.');
 }
 
-showError =error => {
+const showError =error => {
   console.log(error);
 }
 
-portWrite = () => {
+const portWrite = () => {
   myPort.write("Hello... This port is ready for use.\n");
 }
 
-portLoop = () => {
+const portLoop = () => {
   myPort.write("Loop test...\n");
 }
