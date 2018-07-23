@@ -20,23 +20,23 @@ const showPortOpen = () => {
   setTimeout(portWrite, 3000);
 }
 
-const readSerialData = data => {
+function readSerialData(data) {
   console.log(data);
   setTimeout(portLoop, 2000);
 }
 
-const showPortClose = () => {
+function showPortClose() {
   console.log('Port closed.');
 }
 
-const showError = error => {
+function showError(error) {
   console.log(error);
 }
 
-const portWrite = () => {
+function portWrite() {
   myPort.write("Hello... This port is ready for use.\n");
 }
 
-const portLoop = () => {
+function portLoop() {
   myPort.write("Loop test...\n");
 }
