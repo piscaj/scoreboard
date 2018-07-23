@@ -15,7 +15,7 @@ parser.on('data', readSerialData);
 myPort.on('close', showPortClose);
 myPort.on('error', showError);
 
-const showPortOpen = () => {
+function showPortOpen = () => {
   console.log('Port open. Data rate: ' + myPort.baudRate);
   setTimeout(portWrite, 3000);
 }
