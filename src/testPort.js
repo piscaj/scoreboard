@@ -32,6 +32,6 @@ function showError(error) {
   console.log('Serial port error: ' + error);
 }
 
-fuction portWrite() {
+function portWrite() {
   myPort.write("Hello\n");
 }
