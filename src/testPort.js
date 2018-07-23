@@ -15,23 +15,28 @@ myPort.on('close', showPortClose);
 myPort.on('error', showError);
 
 function showPortOpen() {
-  console.log('port open. Data rate: ' + myPort.baudRate);
+  console.log('Port open. Data rate: ' + myPort.baudRate);
   setTimeout(portWrite, 3000);
   
 }
 
 function readSerialData(data) {
   console.log(data);
+  setTimeout(portLoop, 2000);
 }
 
 function showPortClose() {
-  console.log('port closed.');
+  console.log('Port closed.');
 }
 
 function showError(error) {
-  console.log('Serial port error: ' + error);
+  console.log(error);
 }
 
 function portWrite() {
   myPort.write("Hello... This port is ready for use.\n");
+}
+
+function portLoop() {
+  myPort.write("Loop test...\n");
 }
