@@ -33,5 +33,5 @@ function showError(error) {
 }
 
 function portWrite() {
-  myPort.write("Hello\n");
+  myPort.write("Hello... This port is erady for use.\n");
 }
