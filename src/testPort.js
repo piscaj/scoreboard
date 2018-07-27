@@ -72,8 +72,8 @@ function showPortOpen() {
 
 function readSerialData(data) {
   console.log(data);
-  //setTimeout(portLoop, 2000);
-  setTimeout(displayCommand(1), 2000);
+  setTimeout(portLoop, 2000);
+  //setTimeout(displayCommand(1), 2000);
 }
 
 function showPortClose() {
