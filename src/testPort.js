@@ -1,3 +1,5 @@
+import { displayCommand } from './controlDigit.js';
+
 var SerialPort = require('serialport');// include the library
 //var portname = process.argv[2]; // get port name from the command line
 const portname = '/dev/ttyAMA0';
@@ -24,7 +26,8 @@ function showPortOpen() {
 
 function readSerialData(data) {
   console.log(data);
-  setTimeout(portLoop, 2000);
+  //setTimeout(portLoop, 2000);
+  setTimeout(myPort.write(displayCommand(data)), 2000);
 }
 
 function showPortClose() {
