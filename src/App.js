@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import DigitProtocolTester from './protocolTest'
+import TestDisplay from './testDisplayCommand.js'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <DigitProtocolTester />
+        <TestDisplay />
       </div>
     );
   }
