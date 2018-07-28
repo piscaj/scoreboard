@@ -12,8 +12,7 @@ class TestDisplay extends Component {
       this.updateState = this.updateState.bind(this);
     };
     updateState(e) {
-      //Process string input to protocol for digit.
-      //console.log(displayCommand(e));
+
      this.setState({outputString: displayCommand(e.target.value.charCodeAt(0),10)})
       
     }

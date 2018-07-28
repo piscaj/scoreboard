@@ -3,8 +3,6 @@ var SerialPort = require('serialport');// include the library
 //var portname = process.argv[2]; // get port name from the command line
 const portname = '/dev/ttyAMA0';
 
-
-
 var myPort = new SerialPort(portname, {
     baudRate: 9600
   }); //Setup serial port
