@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { displayCommand } from './controlDigit.js';
+import { displayCommand } from './controlDigit';
 
 class TestDisplay extends Component {
     constructor(props) {

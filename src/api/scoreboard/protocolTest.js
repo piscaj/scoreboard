@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
-import { calculateChk } from './calculateChecksum.js';
-import { SOH, DIGIT, ID0, ID1, ETX } from "./constants.js";
-import { displayCommand } from './controlDigit.js';
+import { calculateChk } from './calculateChecksum';
+import { SOH, DIGIT, ID0, ID1, ETX } from "../../../src/constants";
+import { displayCommand } from './controlDigit';
 
 var TEMP = 0x00;
 class DigitProtocolTest extends Component {

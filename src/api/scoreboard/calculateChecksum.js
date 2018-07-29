@@ -1,4 +1,4 @@
-import { toHex } from './convertHex.js';
+import { toHex } from '../tools/convertHex';
 
 export const calculateChk = s =>
 {

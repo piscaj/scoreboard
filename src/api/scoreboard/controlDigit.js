@@ -1,5 +1,5 @@
-import { calculateChk } from './calculateChecksum.js';
-import { SOH, DIGIT, ID0, ID1, ETX } from "./constants.js";
+import { calculateChk } from './calculateChecksum';
+import { SOH, DIGIT, ID0, ID1, ETX } from "../../../src/constants"
 
 
 export const displayCommand = s =>
